@@ -7,16 +7,38 @@
     <title>Cookie clicker</title>
 </head>
 <body>
-    <h2 class="cookieCountDisplay" id="cookieDisplay">0 cookies</h2>
-    <div class="cookie" id="cookie">
-        COOKIE
+    <div class="game-container">
+        <header class="header">
+            <h1>FAKE Cookie Clicker</h1>
+        </header>
+
+        <main class="main-area">
+            <section class="cookie-area">
+                <h2 id="cookieDisplay" class="cookieCountDisplay">0 cookies</h2><br><br>
+                <div id="cookie" class="cookie">COOKIE</div>
+            </section>
+
+            <section class="shop-area">
+                <h3>Shop</h3>
+                <div id="cursorDisplay" class="building">0 Cursors</div>
+                <div id="factoryDisplay" class="building">0 Factories</div>
+                <div id="mineDisplay" class="building">0 Mines</div>
+                <div id="shopDisplay" class="building">0 Shops</div>
+            </section>
+
+            <section class="stats-area">
+                <h3>Stats</h3>
+                <div id="cpsDisplay">0 cookies per second</div>
+                <div id="cpcDisplay">1 cookie per click</div>
+                <div id="buildingCountDisplay">0 buildings total</div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            Made by <a href="https://github.com/PratyushGuptaIsMe" class="footerGithubLink">pratyushguptaisme</a> — <span>v1.0</span>
+        </footer>
     </div>
+
     <script src="cookie.js"></script>
-    <div>
-        <div id="cursorDisplay">0 Cursors</div>
-        <div id="factoryDisplay">0 Factories</div>
-        <div id="mineDisplay">0 Mines</div>
-        <div id="shopDisplay">0 Shops</div>
-    </div>
 </body>
 </html>
