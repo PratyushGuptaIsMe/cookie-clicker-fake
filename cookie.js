@@ -5,37 +5,24 @@ class cursor{
 }
 class grandma{
     constructor(){
-        this.cps = 1;
+        this.cps = 2;
     }
 }
 class factory{
     constructor(){
-        this.cps = 1;
+        this.cps = 4;
     }
 }
 class mine{
     constructor(){
-        this.cps = 1;
+        this.cps = 10;
     }
 }
 class shop{
     constructor(){
-        this.cps = 1;
+        this.cps = 100;
     }
 }
-
-const COOKIE = document.getElementById("cookie");
-const COOKIECOUNTER = document.getElementById("cookieDisplay");
-let cookiesPerClick = 1;
-let cps = 0;
-let cookies = 0;
-let buildings = [new cursor(), ]
-
-COOKIE.addEventListener("click", () => {
-    cookies = cookies + cookiesPerClick;
-})
-animationLoop()
-
 function updateCookieCounter(){
     COOKIECOUNTER.textContent = Math.floor(cookies) + " cookies";
 }
@@ -50,6 +37,18 @@ function animationLoop(){
     updateCookieCounter();
     requestAnimationFrame(animationLoop)
 }
+
+const COOKIE = document.getElementById("cookie");
+const COOKIECOUNTER = document.getElementById("cookieDisplay");
+let cookiesPerClick = 1;
+let cps = 0;
+let cookies = 0;
+let buildings = [new cursor(), new shop(), new mine()]
+
+animationLoop();
+COOKIE.addEventListener("click", () => {
+    cookies = cookies + cookiesPerClick;
+})
 setInterval(() => {
-    cookies = cookies + cps/10;
-}, 100);
+    cookies = cookies + cps/100;
+}, 10);
